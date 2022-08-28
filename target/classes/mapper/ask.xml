@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper	namespace="ask">
+
+	<select id="listUser" resultType="Ask">
+		SELECT * FROM ask
+		WHERE answer IS NOT NULL
+	</select>
+
+	<insert id="questionAdd">
+		INSERT INTO ask (question)
+		VALUES (#{question}) 
+	</insert>
+	
+	<select id="unansweredList" resultType="Ask">
+		SELECT ask_id, question FROM ask
+		WHERE answer IS NULL
+	</select>
+	
+	<select id="answerList" resultType="Ask">
+		SELECT * FROM ask
+		WHERE answer IS NOT NULL
+	</select>
+	
+	<update id="answerAdd">
+		UPDATE ask
+		SET answer = #{answer}
+		WHERE ask_id = #{askid}
+	</update>
+	
+	<delete id="questionDelete">
+		DELETE FROM ask
+		WHERE ask_id = #{askid}	
+	</delete>
+	
+	<delete id="answerDelete">
+		DELETE FROM ask
+		WHERE ask_id = #{askid}
+	</delete>
+	
+	<select id="ansInfo" resultType="Ask">
+		SELECT * FROM ask
+		WHERE ask_id = #{askid}
+	</select>
+	
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper	namespace="post">
+	
+	<select id="list" resultType="Post">
+		SELECT title
+		, content
+		, post_id
+		, DATE_FORMAT(date, '%Y.%m.%d') AS date 
+		FROM post
+	</select>
+	
+	<select id="postInfo" resultType="Post">
+		SELECT * FROM post
+		WHERE post_id = #{postid}
+	</select>
+	
+	<insert id="add">
+		INSERT INTO post (title, content, date)
+		VALUES (#{title}, #{content}, sysdate()) 
+	</insert>
+	
+	<update id="modify">
+		UPDATE post
+		SET content = #{content}
+		WHERE post_id = #{postid}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM post
+		WHERE post_id = #{postid}		
+	</delete>
+	
+</mapper>

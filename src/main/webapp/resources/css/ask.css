@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+
+form {
+    display: flex;
+}
+
+#question {
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    background-color: #D7E6FE;
+    width: 880px;
+    padding: 10px 20px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    font-family: "Gowun Dodum";
+    letter-spacing: -1px;
+}
+
+#send {
+    all: unset;
+    background-color: #2F4858;
+    color: #fff;
+    padding: 0px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#qna-list {
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.qna {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 14px;
+}
+
+.text-box {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.q-wrap {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.q {
+    background-color: #F5F7FB;
+    max-width: 650px;
+    border-top-left-radius: 0;
+}
+
+.a-wrap {
+    display: flex;
+    justify-content: flex-end;      
+}
+
+.a {
+    background-color: #D7E6FE;
+    max-width: 650px;
+    border-bottom-right-radius: 0;
+}

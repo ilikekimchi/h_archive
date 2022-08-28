@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	letter-spacing: -1px;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+button {
+    all: unset;
+}
+
+#content-wrap {
+	max-width: 900px;
+	margin: 0 auto;
+
+}
+
+#tab-box {
+    margin-top: 10px;
+}
+
+.btn-style {
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+.ans {
+    
+}
+
+.unans {
+    background-color: #000;
+    color: #fff;
+}
+
+.ask-list {
+    margin-top: 30px;
+}
+
+.answer-wrap {
+    margin-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6eaee;
+}
+
+.fa-reply {
+    transform: rotate(180deg);
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0px;
+}
+
+.btn {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-left: 6px;
+    background-color: #fff;
+}
+
+.ask-list-unans {
+    /* display: none; */
+}
+
+.ask-list-unans li {
+	margin-bottom: 30px;
+}
+
+.ans-input {
+    resize: none;
+    outline: none;
+	width: 50%;
+	height: 10px;
+	line-height: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>		
+		<setting name="cacheEnabled" value="false" />
+        <setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.archive.ksh.model.AccessInfo" alias="AccessInfo"/>
+		<typeAlias type="com.archive.ksh.model.Ask" alias="Ask"/>
+		<typeAlias type="com.archive.ksh.model.Post" alias="Post"/>
+		<typeAlias type="com.archive.ksh.model.About" alias="About"/>
+	</typeAliases>
+
+
+	<mappers>
+		<mapper resource="mapper/about.xml"/>
+		<mapper resource="mapper/access.xml"/>
+		<mapper resource="mapper/ask.xml"/>
+		<mapper resource="mapper/post.xml"/>
+	</mappers>
+</configuration>
